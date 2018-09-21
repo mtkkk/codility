@@ -3,7 +3,7 @@ package codility_3;
 import java.util.stream.IntStream;
 
 
-public class main {
+public class main_1 {
 
 	public static void main(String[] args) {
 		
