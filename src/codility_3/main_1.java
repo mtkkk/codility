@@ -12,6 +12,7 @@ public class main_1 {
 		System.out.println(solution(a));
 	}
 	
+	//Note: Got O(N^2)
 	public static int solution(int[] A){
 		int solutionNumber = 0;
 		

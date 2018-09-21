@@ -7,7 +7,8 @@ public class main_1_2 {
 		
 		System.out.println(solution(a));
 	}
-	
+
+	//Note: Got O(N)
 	public static int solution(int[] A){
 		
 		int n = A.length+1;
