@@ -1,0 +1,6 @@
+Algorithms
+
+-Adicionar um numero a uma lista e verificar se está na lista
+
+HashSet<Integer> dups = new HashSet<Integer>();
+if (dups.add(A[i])){}
