@@ -1,0 +1,20 @@
+Big O Notation Cheat Sheet
+
+(GOOD ALGORITHMS)
+---------------------
+O(1) 			- Constant time, fixed number of operations (result = n * n)
+O(log n)		- Logarithmic time, the value of n is halved on each iteration of the loop
+O(n)			- Linear time (For loop iterating trough the array)
+O(n log n)		- 
+---------------------
+(BAD ALGORITHMS)
+O(n^k), k >= 2	-		
+O(k^n), k >= 2	-
+O(n!)			-
+
+
+Codility expected time complexity 
+
+n <= 1.000.000, the expected time complexity is O(n) or O(n log n),
+n <= 10.000, the expected time complexity is O(n2),
+n <= 500, the expected time complexity is O(n3).
