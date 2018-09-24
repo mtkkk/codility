@@ -2,5 +2,43 @@ Algorithms
 
 -Adicionar um numero a uma lista e verificar se está na lista
 
-HashSet<Integer> dups = new HashSet<Integer>();
-if (dups.add(A[i])){}
+	HashSet<Integer> dups = new HashSet<Integer>();
+	if (dups.add(A[i])){}
+
+-Preencher um array inteiro com um determinado valor
+	
+	Arrays.fill(A[], valor)
+
+-Achar todos os numeros primos 
+	
+	Preencher um array de boolean e ir "desmarcando(false)"	 aqueles que não são primos. 
+	Algoritmo de Eratosthenes -> 
+		for(int i = 2 ; i*i <= N ; i++){
+			if(primeCheck[i]){ //Checks if hasnt been marked
+				for(int j = i*2 ; j <= N ; j += i){
+					primeCheck[j] = false;
+				}
+			}
+		}
+
+-Rotacionar um número inteiro
+	
+	// Rotate function to right rotate the number 
+    static int Rotate(int n) 
+    { 
+        int rem = n % 10; // find unit place number 
+        rem *= Math.pow(10, countDigits(n)); // to put unit place 
+        // number as first digit. 
+        n /= 10; // remove unit digit 
+        n += rem; // add first digit to rest 
+        return n; 
+    } 		
+
+    // Function to find total number of digits 
+    static int countDigits(int n) 
+    { 
+        int digit = 0; 
+        while ((n /= 10) > 0) 
+            digit++; 
+        return digit; 
+    } 
