@@ -3,7 +3,7 @@ package codility_3;
 import java.util.stream.IntStream;
 
 
-public class main {
+public class main_1 {
 
 	public static void main(String[] args) {
 		
@@ -12,6 +12,7 @@ public class main {
 		System.out.println(solution(a));
 	}
 	
+	//Note: Got O(N^2)
 	public static int solution(int[] A){
 		int solutionNumber = 0;
 		
