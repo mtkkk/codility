@@ -42,3 +42,13 @@ Algorithms
             digit++; 
         return digit; 
     } 
+
+
+-Descobrir quantidade de números divisíveis por K
+	int lowerBound, int higherBound, int K
+	(higherBound/K) - (lowerBound/K) + lowerBound % K == 0 ? 1 : 0
+
+-Guardando valores (ex: quantas vezes um numero apareceu no array)	
+	Map<Integer,Integer> counter = new HashMap<Integer,Integer>();
+	for(Entry<Integer,Integer> nOccurrences : counter.entrySet()){
+	}
