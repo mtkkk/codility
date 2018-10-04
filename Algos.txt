@@ -52,3 +52,17 @@ Algorithms
 	Map<Integer,Integer> counter = new HashMap<Integer,Integer>();
 	for(Entry<Integer,Integer> nOccurrences : counter.entrySet()){
 	}
+
+
+*******************************************************************
+*****************************SORTING*******************************
+*******************************************************************	
+
+-Bubble Sort
+	for(int i = array.length-1 ; i >= 1 ; i--){
+		for(int j = 0; j <= i-1 ; j++){
+			if(array[j] > array[j+1]){
+				swap(array,j,j+1);
+			}
+		}
+	}
