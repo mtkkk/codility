@@ -7,10 +7,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-public class NumberOfDiscIntersections_1 {
+public class NumberOfDiscIntersections_2 {
 
 	public static void main(String[] args) {
-		int[] A = {1,5,2,1,4,0};
+		//int[] A = {1,5,2,1,4,0};
+		int[] A = {1, 2147483647, 0};		
 		System.out.println(solution(A));
 	}
 	
@@ -32,13 +33,11 @@ public class NumberOfDiscIntersections_1 {
 	
 	public static boolean intersects(int i, int iRange, int j, int jRange){
 		
-		for(int p = i ; p <= i+iRange ; p++){
-			if(p >= j-jRange){
-				return true;
-			}
-		}
+		if((long) i+iRange >= j-jRange){
+			return true;
+		}		
 		
 		return false;
 	}
 }
-//https://app.codility.com/demo/results/trainingU576QB-487/
+//https://app.codility.com/demo/results/trainingYEFMR9-U6D/

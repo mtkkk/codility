@@ -1,4 +1,4 @@
-Algorithms
+﻿Algorithms
 
 -Adicionar um numero a uma lista e verificar se está na lista
 
@@ -66,3 +66,16 @@ Algorithms
 			}
 		}
 	}
+
+
+
+*******************************************************************
+**************************MATH CONCEPTS****************************
+*******************************************************************
+
+-Maximum number of combinations
+	->Unordered, no repetition
+		n = array size
+		r = numbers chosen (2 for pairs, 3 for triplets)
+		n! / r!(n-r)!	=> 	
+		maxCombinations = n * (n-1) / 2
