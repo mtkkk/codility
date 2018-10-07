@@ -4,3 +4,7 @@
 
 -If lower or higher bound is int overflow limit (2,147,483,647)
 	->All math operations that could exceed this value should be cast to (long)
+
+
+-If negative numbers are allowed
+	->Test case with all negative numbers	

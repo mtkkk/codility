@@ -1,5 +1,11 @@
 ﻿Algorithms
 
+-Converter ArrayList para Array tipo primitivo
+	myList.stream().mapToInt(Integer::valueOf).toArray();
+
+-Converter lista de tipo primitivo para List<T>
+	Arrays.asList(A);
+
 -Adicionar um numero a uma lista e verificar se está na lista
 
 	HashSet<Integer> dups = new HashSet<Integer>();
@@ -9,17 +15,7 @@
 	
 	Arrays.fill(A[], valor)
 
--Achar todos os numeros primos 
-	
-	Preencher um array de boolean e ir "desmarcando(false)"	 aqueles que não são primos. 
-	Algoritmo de Eratosthenes -> 
-		for(int i = 2 ; i*i <= N ; i++){
-			if(primeCheck[i]){ //Checks if hasnt been marked
-				for(int j = i*2 ; j <= N ; j += i){
-					primeCheck[j] = false;
-				}
-			}
-		}
+
 
 -Rotacionar um número inteiro
 	
@@ -43,10 +39,6 @@
         return digit; 
     } 
 
-
--Descobrir quantidade de números divisíveis por K
-	int lowerBound, int higherBound, int K
-	(higherBound/K) - (lowerBound/K) + lowerBound % K == 0 ? 1 : 0
 
 -Guardando valores (ex: quantas vezes um numero apareceu no array)	
 	Map<Integer,Integer> counter = new HashMap<Integer,Integer>();
@@ -79,3 +71,45 @@
 		r = numbers chosen (2 for pairs, 3 for triplets)
 		n! / r!(n-r)!	=> 	
 		maxCombinations = n * (n-1) / 2
+
+-Descobrir quantidade de números divisíveis por K
+	int lowerBound, int higherBound, int K
+	(higherBound/K) - (lowerBound/K) + lowerBound % K == 0 ? 1 : 0		
+
+
+*******************************************************************
+**************************PRIME NUMBERS****************************
+*******************************************************************	
+
+-Achar todos os numeros primos 
+	
+	Preencher um array de boolean e ir "desmarcando(false)"	 aqueles que não são primos. 
+	Algoritmo de Eratosthenes -> 
+		boolean primeCheck[] = new boolean[N+1];
+		Arrays.fill(primeCheck, true);
+		for(int i = 2 ; i*i <= N ; i++){
+			if(primeCheck[i]){ //Checks if hasnt been marked
+				for(int j = i*2 ; j <= N ; j += i){
+					primeCheck[j] = false;
+				}
+			}
+		}
+
+*******************************************************************
+***************************GCD AND LCM*****************************
+*******************************************************************	
+
+NOTA*** GCD (Greatest Common Divisor) ou GCF(Greatest Common Factor) é o MDC(Máximo Divisor Comum)
+		LCM (Least Common Multiple) é o MDC(Mínimo Múltiplo Comum)
+
+-Euclidean Algorithm (GCD)
+	public static int gcd(int a, int b){
+		if(a % b == 0){
+			return b;
+		} else {
+			return gcd(b, a % b);
+		}
+	}
+
+-LCM
+	int lcm = A*B / gcd(A,B);
