@@ -3,8 +3,8 @@ package other;
 public class EuclideanAlgorithm {
 
 	public static void main(String[] args) {
-		int A = 28;
-		int B = 36;
+		int A = 3;
+		int B = 10;
 		System.out.println(solution(A, B));
 	}
 	

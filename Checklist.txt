@@ -8,3 +8,15 @@
 
 -If negative numbers are allowed
 	->Test case with all negative numbers	
+
+
+-If checking wether
+
+
+
+
+https://codesays.com/solutions-to-training-by-codility/
+INTERVIEW:
+Count Arithmetic Sequence
+Tree Amplitude
+Best Shuffle

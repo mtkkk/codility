@@ -46,6 +46,10 @@
 	}
 
 
+-Pegar o maior valor de uma collection
+	int highest = Collections.max(collection);
+
+
 *******************************************************************
 *****************************SORTING*******************************
 *******************************************************************	
@@ -74,8 +78,56 @@
 
 -Descobrir quantidade de números divisíveis por K
 	int lowerBound, int higherBound, int K
-	(higherBound/K) - (lowerBound/K) + lowerBound % K == 0 ? 1 : 0		
+	(higherBound/K) - (lowerBound/K) + lowerBound % K == 0 ? 1 : 0
 
+
+-Um número quando fatorizado pode ser representado por números primos e seus expoentes
+	ex: 10 = 2^1 * 5^1
+		30 = 2^1 * 3^1 * 5^1
+		15 = 3^1 * 5^1
+		75 = 3^1 * 5^2
+
+	Para descobrir se os divisores primos são os mesmos
+	1 - Tirar o GCD
+	2 - Para cada numero, tirar o GCD novamente GCD(X,GCD(X,Y))
+		2.1 - Se este GCD for 1 significa que não possui mais fator em comum
+	3 - Após dividir pelo GCD tem que dar 1
+
+	public static int solution(int[] A, int[] B){
+		int count = 0;
+	    for(int i = 0 ; i < A.length ; i++){
+	    	if(hasSamePrimeDivisors(A[i],B[i])){
+	    		count += 1;
+	    	}   
+	    }
+	        
+	    return count;
+	}
+
+	public static boolean hasSamePrimeDivisors(int x, int y) {
+		
+		int gcd_value = gcd(x,y);
+		
+		x = removeCommonPrimeDivisors(x, gcd_value);
+		if(x != 1){
+			return false;
+		}
+		y = removeCommonPrimeDivisors(y, gcd_value);
+		
+		return y==1;
+	}
+
+	public static int removeCommonPrimeDivisors(int x, int y){
+		while (x != 1){
+			int gcd_value = gcd(x,y);
+			if(gcd_value == 1){
+				break;
+			}
+			x /= gcd_value;
+		}
+		
+		return x;
+	}
 
 *******************************************************************
 **************************PRIME NUMBERS****************************
@@ -94,6 +146,33 @@
 				}
 			}
 		}
+
+-Verificar se um número é primo
+
+	public static boolean isPrime(int n) {
+		if(n == 2){
+			return true;
+		} else if(n == 3){
+			return true;
+		} else if(n % 2 == 0){
+			return false;
+		} else if(n % 3 == 0){
+			return false;
+		}
+		
+		int i = 5;
+		int w = 2;
+		
+		while(i*i <= n){
+			if(n % i == 0){
+				return false;
+			}
+			i+= w;
+			w = 6 - w;
+		}
+		
+		return true;
+	}			
 
 *******************************************************************
 ***************************GCD AND LCM*****************************
