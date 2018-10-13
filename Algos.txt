@@ -47,8 +47,11 @@
 
 
 -Pegar o maior valor de uma collection
+	-Lista
 	int highest = Collections.max(collection);
 
+	-Array de int
+	int max = Arrays.stream(A).max().getAsInt();
 
 *******************************************************************
 *****************************SORTING*******************************
@@ -128,6 +131,11 @@
 		
 		return x;
 	}
+
+
+	-Modulo (mod)
+		-Quando um numero é menor que o mod, o resulto é o proprio numero
+		-Se aplicar um mod X e depois aplicar um mod Y<X (contanto que X e Y sejam multiplos) o resultado do mod Y será o mesmo do mod X
 
 *******************************************************************
 **************************PRIME NUMBERS****************************
