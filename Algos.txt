@@ -1,4 +1,4 @@
-﻿Algorithms
+Algorithms
 
 -Converter ArrayList para Array tipo primitivo
 	myList.stream().mapToInt(Integer::valueOf).toArray();
@@ -52,6 +52,10 @@
 
 	-Array de int
 	int max = Arrays.stream(A).max().getAsInt();
+
+
+-Converter um numero para binário
+	Integer.toBinaryString(int i)
 
 *******************************************************************
 *****************************SORTING*******************************
